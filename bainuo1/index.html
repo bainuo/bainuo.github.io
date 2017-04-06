@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<!-- Bootstrap v3.3.4 Grid Styles -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+	
+	<!-- Header CSS (First Sections of Website: paste after release from _header.min.css here) -->
+	<style>@font-face{font-family:NotoSansCJKsc-Bold;font-style:normal;font-weight:400;src:url(fonts/NotoSansCJKsc-Bold/NotoSansCJKsc-Bold.eot?#iefix) format("embedded-opentype"),url(fonts/NotoSansCJKsc-Bold/NotoSansCJKsc-Bold.woff) format("woff"),url(fonts/NotoSansCJKsc-Bold/NotoSansCJKsc-Bold.ttf) format("truetype")}@font-face{font-family:NotoSansCJKsc-Light;font-style:normal;font-weight:400;src:url(fonts/NotoSansCJKsc-Light/NotoSansCJKsc-Light.eot?#iefix) format("embedded-opentype"),url(fonts/NotoSansCJKsc-Light/NotoSansCJKsc-Light.woff) format("woff"),url(fonts/NotoSansCJKsc-Light/NotoSansCJKsc-Light.ttf) format("truetype")}@font-face{font-family:NotoSansCJKsc-Medium;font-style:normal;font-weight:400;src:url(fonts/NotoSansCJKsc-Medium/NotoSansCJKsc-Medium.eot?#iefix) format("embedded-opentype"),url(fonts/NotoSansCJKsc-Medium/NotoSansCJKsc-Medium.woff) format("woff"),url(fonts/NotoSansCJKsc-Medium/NotoSansCJKsc-Medium.ttf) format("truetype")}@font-face{font-family:NotoSansCJKsc-Regular;font-style:normal;font-weight:400;src:url(fonts/NotoSansCJKsc-Regular/NotoSansCJKsc-Regular.eot?#iefix) format("embedded-opentype"),url(fonts/NotoSansCJKsc-Regular/NotoSansCJKsc-Regular.woff) format("woff"),url(fonts/NotoSansCJKsc-Regular/NotoSansCJKsc-Regular.ttf) format("truetype")}body{font-family:NotoSansCJKsc-Bold,sans-serif;font-size:14px;height:100%;overflow-x:hidden}.logo{margin:22px 0 15px}.lngTitle{text-align:right;margin:39px -7px 31px 56px;height:43px}input[name=search]{border:1px solid #2773bc;-webkit-border-radius:20px;border-radius:20px;padding:5px 2px 5px 30px;background-position:left;font-size:14px;color:#0278c0;text-align:center}#head-search,#head-search-xs,.myparagon_login{position:relative;max-width:180px;display:inline-block}#head-search input[name=search],#head-search-xs input[name=search]{height:30px;width:100%;padding:0 24px 0 45px;font-size:14px;color:#0278c0;border:1px solid #2773bc;-webkit-border-radius:30px;border-radius:30px}#head-search input[name=loop],#head-search-xs input[name=loop]{position:absolute;top:0;left:-8px;width:45px;height:100%;border:0;background:url(../img/search.svg) center no-repeat}#head-search input[name=search]::-webkit-input-placeholder,#head-search-xs input[name=search]::-webkit-input-placeholder{color:#0278c0}#head-search input[name=search]::-moz-placeholder,#head-search-xs input[name=search]::-moz-placeholder{color:#0278c0}a.myparagon_href{cursor:pointer;padding:4px 35px;border:1px solid #2773bc;-webkit-border-radius:30px;border-radius:30px;color:#0278c0;text-decoration:none;margin:0 5px;display:inline-block;-webkit-transition:all .25s ease;transition:all .25s ease}a.myparagon_href:hover{color:#fff;background-color:#1b8ed3;border:1px solid #1b8ed3}.top_mnu{height:51px;width:100%;background:-webkit-gradient(linear,left bottom,left top,from(#0077bf),to(#2697db));background:-webkit-linear-gradient(bottom,#0077bf,#2697db);background:linear-gradient(to top,#0077bf,#2697db)}.main_mnu{margin-bottom:0;text-align:center}.main_mnu ul.ul_menu{margin:0;padding:0;list-style-type:none}.dropbtn{color:#fff;padding:12px 58px;font-size:19px;border:none;cursor:pointer;-webkit-transition:all .15s ease;transition:all .15s ease}.bainuo_dropdown,.bainuo_dropdown:last-child{border-style:solid;-webkit-border-image:-webkit-gradient(linear,left bottom,left top,from(white),to(#2697db)) 1 100%;-webkit-border-image:-webkit-linear-gradient(bottom,#fff,#2697db) 1 100%}.bainuo_dropdown{position:relative;display:inline-block;border-width:0 0 0 3px;border-image:-webkit-gradient(linear,left bottom,left top,from(white),to(#2697db)) 1 100%;border-image:linear-gradient(to top,#fff,#2697db) 1 100%;float:left}.bainuo_dropdown:last-child{border-width:0 3px;border-image:-webkit-gradient(linear,left bottom,left top,from(white),to(#2697db)) 1 100%;border-image:linear-gradient(to top,#fff,#2697db) 1 100%}.bainuo_dropdown_content{display:none;position:absolute;background-color:#f9f9f9;min-width:588px;-webkit-box-shadow:0 8px 16px 0 rgba(0,0,0,.2);box-shadow:0 8px 16px 0 rgba(0,0,0,.2);z-index:1;list-style-type:none;-webkit-transition:all .5s ease;transition:all .5s ease}.bainuo_dropdown_content a{color:#2773bc;padding:5px 48px;text-decoration:none;text-align:left;display:block;-webkit-transition:all .16s ease;transition:all .16s ease}.ul_menu .bainuo_dropdown .dropbtn{padding:12px 82px;color:#fff;text-decoration:none;font-size:19px;display:block}.ul_menu .bainuo_dropdown a:hover .dropbtn{background-color:#067cc4}.blkcontent li{color:#000;list-style-type:none}.bainuo_dropdown_content{padding:30px 0 25px;font-size:15px}.bai_nuo_sub_separate{border-left:1px solid #1e91d5;height:69px}.bainuo_dropdown_content a:hover{-webkit-border-radius:6px;border-radius:6px;background:#1e91d5;color:#fff}.bainuo_dropdown:hover .bainuo_dropdown_content{display:block}.bainuo_dropdown:hover .dropbtn{background-color:#2294d8}.blkcontent{padding:0 19px 0 30px;font-size:16px;line-height:1.5em;float:left}.bai_nuo_arrow_drop:hover::after{content:'';position:absolute;left:50%;top:40px;margin-left:-9px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:12px solid #f9f9f9}.prodCard{width:100%;height:380px;background-image:url(../img/bgi.png);background-size:cover}.bann_descr h1{font-size:35px;color:#878787;font-weight:200}.bann_descr h2{font-size:18px;color:#878787}.bann_descr ul{margin:0;padding:0}.bann_descr ul li{font-size:17px;color:#878787;font-weight:200;line-height:29px}.bann_descr li.new:before{content:"New";background-color:#e94f44;padding:0 4px;margin-right:8px}.bann_buttons{margin-top:50px}.button_name{position:absolute;top:8px;left:10px;font-size:14px;color:#878787}.button_name .button_text_descr{font-size:12px;font-weight:600;padding:0;margin:0}.button_img{position:absolute;top:25px;right:25px;background-image:url(img/bunner_arrow.svg);width:24px;height:24px;background-repeat:no-repeat;background-position:top left;background-size:200% 100%}.based,.button_buy{border:0;position:relative;vertical-align:middle;line-height:20px}.all_hdm{text-align:center;width:264px;margin:0 auto}.based{padding:38px 130px;text-align:left;-webkit-border-radius:8px;border-radius:8px;margin-top:15px;background:0 0;background:-webkit-gradient(linear,left bottom,right top,from(rgba(255,0,0,0)),to(rgba(0,0,0,.1)));background:-webkit-linear-gradient(bottom left,rgba(255,0,0,0) 0,rgba(0,0,0,.1) 100%);background:linear-gradient(to top right,rgba(255,0,0,0) 0,rgba(0,0,0,.1) 100%);display:block}.all_buttons,.button_buy,.buy p{text-align:center}.based:hover{background:-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.8)),to(rgba(255,255,255,0)));background:-webkit-linear-gradient(top,rgba(255,255,255,.8) 0,rgba(255,255,255,0) 100%);background:linear-gradient(to bottom,rgba(255,255,255,.8) 0,rgba(255,255,255,0) 100%)}.based:hover .button_img{background-position:100% 0}.buy{margin-top:37px;margin-left:141px}.buy p{background-color:#fafafa;margin:0;padding:16px 0 12px;-webkit-border-radius:5px;border-radius:5px;color:#e84e43;border-bottom:1px solid silver;border-left:1px solid silver;border-right:1px solid silver}.button_buy{padding:13px 97px;-webkit-border-radius:8px;border-radius:8px;background:-webkit-gradient(linear,left bottom,left top,from(#ea554c),to(#ee756e));background:-webkit-linear-gradient(bottom,#ea554c,#ee756e);background:linear-gradient(to top,#ea554c,#ee756e);cursor:pointer}.button_buy:hover{background:#f27c75}.descr_buy{position:absolute;top:9px;left:43px;color:#fff}.bann_buttons,.bann_descr,.buy{float:left}.bann_descr{width:40%}.bann_buttons{width:30%}.buy{width:194px}.button_name_sm{position:absolute;top:7px;left:8px;font-size:14px;color:#878787}.all_buttons{width:640px}.ar{display:inline-block;margin-left:10px;-ms-transform:rotate(0);-webkit-transform:rotate(0);transform:rotate(0)}.banner_small_button{padding:19px 66px;vertical-align:middle;border:0;text-align:left;-webkit-border-radius:8px;border-radius:8px;line-height:20px;position:relative;background:-webkit-gradient(linear,left bottom,right top,from(rgba(255,0,0,0)),to(rgba(0,0,0,.1)));background:-webkit-linear-gradient(bottom left,rgba(255,0,0,0) 0,rgba(0,0,0,.1) 100%);background:linear-gradient(to top right,rgba(255,0,0,0) 0,rgba(0,0,0,.1) 100%);margin-top:20px;margin-right:38px;float:left}.banner_small_button:hover{background:-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.8)),to(rgba(255,255,255,0)));background:-webkit-linear-gradient(top,rgba(255,255,255,.8) 0,rgba(255,255,255,0) 100%);background:linear-gradient(to bottom,rgba(255,255,255,.8) 0,rgba(255,255,255,0) 100%)}.banner_small_button:hover .ar{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.switches{height:43px;width:100%;background-image:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#ececec));background-image:-webkit-linear-gradient(top,#fff,#ececec);background-image:linear-gradient(to bottom,#fff,#ececec)}.switches_descr ul{margin:0;padding:0;list-style-type:none}.switches ul li a{color:#878787;padding:11px 99px;display:block;text-decoration:none;outline:0}.red_button a,.switches ul .red_button a{color:#fff}.switches ul li{display:inline-block;border-width:0 0 0 3px;border-style:solid;-webkit-border-image:-webkit-gradient(linear,left bottom,left top,from(white),to(#ececec)) 1 100%;border-image:-webkit-gradient(linear,left bottom,left top,from(white),to(#ececec)) 1 100%;border-image:-webkit-gradient(linear,left bottom,left top,from(#fff),to(#ececec)) 1 100%;border-image:linear-gradient(to top,#fff,#ececec) 1 100%;float:left;position:relative}.switches ul li:last-child{border-width:0 3px;-webkit-border-image:-webkit-gradient(linear,left bottom,left top,from(#fff),to(#ececec)) 1 100%;-webkit-border-image:-webkit-linear-gradient(bottom,#fff,#ececec) 1 100%;border-image:-webkit-gradient(linear,left bottom,left top,from(#fff),to(#ececec)) 1 100%;border-image:linear-gradient(to top,#fff,#ececec) 1 100%}.red_button{background:-webkit-gradient(linear,left bottom,left top,from(#e95045),to(#ed7476));background:-webkit-linear-gradient(bottom,#e95045,#ed7476);background:linear-gradient(to top,#e95045,#ed7476);color:#fff}.switch_img{margin-right:5px}.red_basket{display:none}.tabs_menu .active{background:#fff}.tabs_menu .red_button.active a{color:#e73331}.tabs_menu .red_button.active a .red_basket{display:inline-block}#tab2,#tab3,#tab4,.tabs_menu .red_button.active a .white_basket{display:none}</style>
+	
+	<!-- Load Main CSS Compilled without JS -->
+	<noscript>
+		<link rel="stylesheet" href="main.min.css">
+	</noscript>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+</head>
+
+<body>
+<!-- Верхняя часть на десктопе и планшетах -->
+<header class="hidden-xs">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="logo">
+					<a href="#"><img src="img/Logo.svg" alt="BaiNuo logo"></a>
+				</div>
+				<div class="lngTitle hidden-md hidden-lg">
+					<form id="head-search">
+						<input name="search" placeholder="搜索" size="20" type="text" >
+						<input name="loop" type="submit" value="">
+					</form>
+					<div class="myparagon_login">
+						<a class="myparagon_href" href="">登录至我的帐号</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 hidden-sm">
+				<div class="lngTitle">
+					<form id="head-search-xs">
+						<input name="search" placeholder="搜索" size="20" type="text" >
+						<input name="loop" type="submit" value="">
+					</form>
+					<div class="myparagon_login">
+						<a class="myparagon_href" href="">登录至我的帐号</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- ---- -->
+
+<!-- Адаптивное лого + меню -->
+<div class="container hidden-md hidden-lg hidden-sm">
+	<div class="row">
+		<div id="sidr-right" class="sidr right">
+			<ul class="accordion">
+
+		    	<li class="accordion_item">
+
+					<label class="accordion_trigger" for="toggle-02">Main site<!--<span class="arrow"></span>--></label>
+					<input type="radio" class="accordion_toggle" name="accordion-01" id="toggle-02" onclick='top.location="http://www.ya.ru"'/>
+
+			        <label class="accordion_trigger grad_blue arrow_clicked" for="toggle-01">Products<span class="arrow"></span></label>
+			        <input type="radio" class="accordion_toggle" name="accordion-01" id="toggle-01" onclick="uncheckRadio(this);"/>
+
+			        <div class="accordion_target">
+			          
+				        <label class="accordion_trigger grad_light_blue border_bottom arrow_clicked" for="toggle-01-1">Products for Windows<span class="arrow_blue"></span></label>
+				        <input type="checkbox" class="accordion_toggle" name="accordion-01-1" id="toggle-01-1"/>
+				        <div class="accordion_target accordion_target_bottom grad_lighter_blue">				        
+					        <ul>
+					        	<li><a href="#"> HDM 16</a></li>
+					        	<li><a href="#">Backup & Recovery 16 + all versions</a></li>
+					        	<li><a href="#">Hard Disk Manager 15 + all version</a></li>
+					        	<li><a href="#">HFS+ for Windows 11</a></li>
+					        	<li><a href="#"> ExtFS for Windows</a></li>
+					        	<li><a href="#">Paragon Deployment Manager 11</a></li>
+					        	<li><a href="#">Paragon Protect & Restore</a></li>
+					        	<li><a href="#">Disk Wiper 15 Professional</a></li>
+					        	<li><a href="#">Drive Copy 15 Professional</a></li>
+					        	<li><a href="#">Migrate OS to SSD 4.0</a></li>
+					        </ul>       				
+				        </div>				        
+
+				        <label class="accordion_trigger grad_light_blue border_bottom arrow_clicked" for="toggle-01-3">Products for Mac<span class="arrow_blue "></span></label>
+				        <input type="checkbox" class="accordion_toggle" name="accordion-01-3" id="toggle-01-3"/>
+				        <div class="accordion_target grad_lighter_blue">
+							<ul>
+								<li><a href="#">NTFS for Mac 14 + 15</a></li>
+								<li><a href="#">Camptune X</a></li>
+								<li><a href="#">Hard Disk Manager for Mac</a></li>
+								<li><a href="#">ExtFS for Mac 10</a></li>
+							</ul>
+						</div>
+
+						<label class="accordion_trigger grad_light_blue  border_bottom arrow_clicked" for="toggle-01-4">Older Products<span class="arrow_blue "></span></label>
+						<input type="checkbox" class="accordion_toggle" name="accordion-01-4" id="toggle-01-4"/>
+							<div class="accordion_target grad_lighter_blue">
+								<ul>
+								<li><a href="#">Partition Manager 15</a></li>
+								<li><a href="#">Hard Disk Manager 14</a></li>
+								<li><a href="#">Backup & Recovery 14 Free Edition (free)</a></li>
+								<li><a href="#">Resсue Kit 14 Free Edition (free)</a></li>
+								<li><a href="#">Virtualization Manager 14 Professiona</a></li>
+								<li><a href="#">GPT Loader</a></li>
+								<li><a href="#">Paragon Alignment Tool 4.0 Professional </a></li>
+								</ul>
+							</div>
+
+						<label class="accordion_trigger grad_light_blue border_bottom" for="toggle-01-5">How to</label>
+				        <input type="checkbox" class="accordion_toggle" name="accordion-01-5" id="toggle-01-5"/>
+				        <label class="accordion_trigger grad_light_blue border_bottom" for="toggle-01-6">Release History </label>
+				        <input type="checkbox" class="accordion_toggle" name="accordion-01-6" id="toggle-01-6"/>
+
+				
+			        </div>
+
+					<label class="accordion_trigger grad_blue arrow_clicked" for="toggle-03">Manuals<span class="arrow"></span></label>
+					<input type="radio" class="accordion_toggle" name="accordion-01" id="toggle-03" onclick="uncheckRadio(this);"/>
+						<div class="accordion_target">
+							
+							<label class="accordion_trigger grad_light_blue border_bottom" for="toggle-03-3">Home & Home Office Manuals</label>
+							<input type="checkbox" class="accordion_toggle" name="accordion-03-3" id="toggle-03-3"/>
+							<label class="accordion_trigger grad_light_blue border_bottom" for="toggle-03-4">Small Business Manuals</label>
+							<input type="checkbox" class="accordion_toggle" name="accordion-03-4" id="toggle-03-4"/>
+							<label class="accordion_trigger grad_light_blue border_bottom" for="toggle-03-5">Medium & Large Business Manuals</label>
+							<input type="checkbox" class="accordion_toggle" name="accordion-03-5" id="toggle-03-5"/>
+
+						</div>
+					<label class="accordion_trigger" for="toggle-04">Support Forum<!--<span class="arrow"></span>--></label>
+					<input type="radio" class="accordion_toggle" name="accordion-01" id="toggle-04" onclick='top.location="http://www.ya.ru"'/>
+					
+					<label class="accordion_trigger" for="toggle-05">Contacts<!--<span class="arrow"></span>--></label>
+					<input type="radio" class="accordion_toggle" name="accordion-01" id="toggle-05" onclick='top.location="http://www.ya.ru"'/>
+
+				</li>
+		    </ul>
+		</div>
+		<div class="main-content hidden-md hidden-lg">
+			<a class="basic" id="right-menu"  href="#sidr">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</a>
+			<div class="row">
+				<div class="col-xs-6">
+					<a href="#"><img src="img/Logo_small.svg" onerror="this.onerror=null; this.src='logo.png'" alt="Small BaiNuo Logo"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ---- -->
+
+<!-- Десктопное меню -->
+<section class="top_mnu">
+	<div class="container">
+		<div class="row">
+		  <nav class="main_mnu clearfix">
+		    <ul class="ul_menu">
+
+		      <li class="bainuo_dropdown bai_nuo_arrow_drop">
+		        <a href="#" class="dropbtn">产品<!--Home--></a>
+		          <ul class="bainuo_dropdown_content">
+		            <li>
+		              <ul class="blkcontent">
+		                <li><a href="#">Extfs for Mac</a></li>
+		                <li><a href="#">NTFS for Mac</a></li>
+		              </ul>
+		              <ul class="blkcontent bai_nuo_sub_separate">
+		                <li><a href="#">Hard Disk Manager for Mac</a></li>
+		                <li><a href="#">HFS+ for Windows</a></li>
+		              </ul>
+		            </li>
+		          </ul>
+		      </li>
+
+		      <li class="bainuo_dropdown">
+		        <a href="#" class="dropbtn">新闻 (英文版)<!--News--></a>
+		      </li>
+
+		      <li class="bainuo_dropdown">
+		        <a href="#" class="dropbtn"> 手册 <!-- Manuals--></a>
+		      </li>
+
+		      <li class="bainuo_dropdown">
+		        <a href="#" class="dropbtn">服务与支持<!--Support FAQ--></a>
+		      </li>
+
+		      <li class="bainuo_dropdown">
+		        <a href="#" class="dropbtn">下载 <!--Downloads--></a>
+		      </li>
+
+
+		    </ul>
+		  </nav>
+		</div>
+	</div>
+</section>
+<!-- ---- -->
+
+<!-- Баннер -->
+<section class="prodCard" >
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="bann_descr">
+					<h1>HFS+ for Windows® 10</h1>
+					<h2>在Windows下完全访问 Mac HFS+ 文件系统！</h2>
+					<ul>
+						<li>是在任何类型（GPT、MBR）的磁盘中完全访问 HFS+分区的唯一解决方案</li>
+						<li>能够以比原始 HFS 文档系统更快的速度传递文件</li>
+						<li>完全兼容 Windows 10</li>
+						<!-- <li class="new">Embedded Recovery Media Builder 3.0</li>
+						<li class="new">Windows 10 Support!</li> -->
+					</ul>
+				</div>
+				<div class="bann_buttons">
+					<div class="all_hdm">
+						<a class="based" href="#">
+							<span class="button_name"><strong>下载</strong><br>HFS+ for Windows® 10 <br> <span class="button_text_descr">10 天 试用版 | 大小:5.9 MB</span></span><span class="button_img"></span>
+						</a>
+						<a class="based" href="#">
+							<span class="button_name"><strong>手册</strong><br>HFS+ for Windows® 10<br> <span class="button_text_descr">大小:661 KB</span></span><span class="button_img"></span>
+						</a>
+
+					</div>		
+				</div>
+				<div class="buy hidden-xs">
+					<a class="button_buy">
+						<span class="descr_buy"><strong>Download now ›</strong></span>
+					</a>
+					<p class="hidden-xs">65.174 Downloads</p>
+				</div>
+				<div class="buy hidden-lg hidden-sm hidden-md">
+					<a href="#" class="button_buy"><span class="descr_buy"><strong>Download now <span class="ar">›</span> </strong></span></a>
+				</div>
+				<div class="buttons_hidden hidden-md hidden-lg">
+					<div class="all_buttons">
+						<button class="banner_small_button" onclick='top.location="http://www.ya.ru"'>
+							<span class="button_name_sm"><strong>下载 <span class="ar">›</span></strong></span>
+						</button>
+					</div>
+					<div class="all_buttons">
+						<button class="banner_small_button" onclick='top.location="http://www.ya.ru"'>
+							<span class="button_name_sm"><strong>手册 <span class="ar">›</span> </strong></span>
+						</button>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ---- -->
+
+<!-- Табы -->
+<!-- дз -->
+<!-- <section class="switches">
+	<div class="container">
+		<div class="row">
+			<div class="switches_descr">
+			<div>				
+				<div class="col-md-3 col-sm-3 pn0"><li class="switch_separate"><a href="#tab1"><span class="switch_img"><img src="img/i.png" alt=""></span>Introduction</a></li></div>
+			</div>
+				<div class="col-md-3 col-sm-3 pn0"><div class="switch_separate"><a href="#tab2"><span class="switch_img"><img src="img/play.png" alt=""></span>How it works</a></div></div>
+				<div class="col-md-3 col-sm-3 pn0"><div class="switch_separate"><a href="#tab3"><span class="switch_img"><img src="img/feat.png" alt=""></span>Full Features</a></div></div>
+				<div class="col-md-3 col-sm-3 pn0"><div class="switch_separate_last active"><a href="#tab4"><span class="switch_img"><img src="img/basket.png" alt=""></span>Buy online</a></li></div>
+			</div> 
+		</div>
+	</div>
+</section> -->
+
+
+<!-- Табы -->
+<section class="switches hidden-xs">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="switches_descr">
+					<ul class="tabs_menu">
+						<li class="switch_separate active"><a href="#tab1"><span class="switch_img"><img src="img/i.png" alt=""></span>预览<!-- Introduction --></a></li>
+						<li><a href="#tab2"><span class="switch_img"><img src="img/play.png" alt=""></span>了解工作原理<!-- How it works --></a></li>
+						<li><a href="#tab3""><span class="switch_img"><img src="img/feat.png" alt=""></span>所有功能<!-- Full Features --></a></li>
+						<li class="red_button"><a href="#tab4">
+							<span class="switch_img">
+								<img class="white_basket" src="//china.paragon-software.com/sites/paragonsoftware.com/images/mac-products/05_E-Shop-white.svg" width="20" height="20">
+								<img class="red_basket" src="//china.paragon-software.com/sites/paragonsoftware.com/images/mac-products/04_E-Shop.svg" width="20" height="20">
+							</span>立即购买<!-- Buy online --></a></li>
+					</ul>
+				</nav> 
+			</div>
+		</div>
+	</div>
+</section>
+<nav class="switches_descr hidden-md hidden-lg hidden-sm">
+	<ul class="tabs_menu">
+		<li><a href="#tab1"><span class="switch_img"><img src="img/i.png" alt=""></span>预览</a></li>
+		<li><a href="#tab2"><span class="switch_img"><img src="img/play.png" alt=""></span>了解工作原理</a></li>
+		<li><a href="#tab3"><span class="switch_img"><img src="img/feat.png" alt=""></span>所有功能</a></li>
+		<li class="red_button"><a href="#tab4">
+			<span class="switch_img">
+				<img class="white_basket" src="//china.paragon-software.com/sites/paragonsoftware.com/images/mac-products/05_E-Shop-white.svg" width="20" height="20">
+				<img class="red_basket" src="//china.paragon-software.com/sites/paragonsoftware.com/images/mac-products/04_E-Shop.svg" width="20" height="20">
+			</span>立即购买</a></li>
+	</ul>
+</nav>
+<!-- ---- -->
+
+
+<section class="intro tab" id="tab1">
+	<section class="intro_about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="title">
+						<h2>Mac HFS+ 文件系统 和 Windows NTFS® 间数据交换自由！</h2>
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="intro_content">
+						<p>
+							产业最优秀文件系统科技助您体验 Mac & Windows 之间的完全交流。Paragon HFS+ for Windows 是在多数 Window 版本下实现任何类型（GPT， MBR）的磁盘中完全读写访问 HFS /HFSX 分区的唯一解决方案。是目前市场上最稳定的从 Windows 系统访问 Mac 格式分区的驱动。
+						</p>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="intro_item hfs_color">
+
+						<div class="intro_img">
+								<img src="img/compatibility.png" alt="">
+						</div>
+
+						<div class="intro_text">
+							<h3>完全兼容</h3>
+							<p>从任何类型 （GPT, MBR）的磁盘完全访问 HFS+ 分区的唯一解决方案。完全支持当前任何版本的 Windows 系统 （10， 8 / 8.1， 7，Vista， XP，2003， 2008 以及 2012 R2 服务器）。完全兼容 Boot Camp 驱动器。</p>
+						</div>					
+
+					</div>
+					<div class="intro_item hfs_color">
+
+						<div class="intro_img">
+								<img src="img/performance.png" alt="">
+						</div>
+
+						<div class="intro_text">
+							<h3>高性能的产品让我们变得轻松</h3>
+							<p>以甚至高于本地 HFS 文件系统性能的速度传输文件。高度稳定传输系统间的大媒体文件 。完美地运作于任何类型的硬盘（ USB，FireWire， ESATA， SATA 或 IDE）。</p>
+						</div>					
+
+					</div>
+					<div class="intro_item hfs_color">
+
+						<div class="intro_img">
+								<img src="img/crossplatform.png" alt="">
+						</div>
+
+						<div class="intro_text">
+							<h3>顶级便利</h3>
+							<p>无需任何额外购买 —— 此项解决方案甚至能在 Windows XP 下从 GPT磁盘安装 HFS+ 分卷。Paragon 软件是最早实现完全访问多数文件系统全套驱动的开发者！</p>
+						</div>					
+
+					</div>
+					<div class="intro_item hfs_color">
+
+						<div class="intro_img">
+								<img src="img/support.png" alt="">
+						</div>
+
+						<div class="intro_text">
+							<h3>因为专业值得信任</h3>
+							<p>自1994年以来 Paragon 软件集团提供着经市场验证的可靠解决方案，帮助800多万客户实现了最高效益。我们关注IT行业，其新闻和趋势并定期提供产品更新和增强。</p>
+							<br>
+							<p>访问您的个人 <a href="https://my.paragon-software.com/#/login">MyParagon</a> 账户，在此我们精心选择和定期发布最新新闻及最佳优惠选择。</p>
+						</div>					
+
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="support">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="title">
+						<h2>支持</h2>
+					</div>
+				<!-- <div class="col-md-2 col-sm-2 hidden-xs">
+					<div class="img_support_wrap">
+						<img class="icon" src="//china.paragon-software.com/sites/paragonsoftware.com/indexPage/icon-support-cn.png">
+					</div>
+				</div>
+
+				<div class="col-md-8 col-sm-8">
+					<div class="support_content">
+						<p>享受免费的在线支持！如果有任何问题，我们的高效高质量支持团队将全力帮助您。我们为所有消费产品提供其整个生命周期内的免费支持保障。<a href="/support/" target="_blank">了解更多 &gt;</a></p>
+						<p>我们致力于确保每个问题得到解决，使您满意。一次购买，一次安装，长久获益，使我们的产品尽其所能。</p>
+					</div>
+				</div> -->
+					
+
+					<div class="alal">
+						<img class="icon" src="https://www.paragon-software.com/sites/paragonsoftware.com/images/icons/icon-suppot_170.png" width="100px" align="left">
+						<div class="support_content">
+							<p>享受免费的在线支持！如果有任何问题，我们的高效高质量支持团队将全力帮助您。我们为所有消费产品提供其整个生命周期内的免费支持保障。<a href="/support/" target="_blank">了解更多 &gt;</a></p>
+							<p>我们致力于确保每个问题得到解决，使您满意。一次购买，一次安装，长久获益，使我们的产品尽其所能。</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="supports_btns">
+					<a class="bainuo_btn">My Paragon ›</a>
+					<a class="bainuo_btn">支持论坛 ›</a>
+					<a class="bainuo_btn">支持请求 ›</a>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+
+<section class="how_it_works tab" id="tab2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="title">
+					<h2>如何运作</h2>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="how_img"><img src="img/hfs10.5_screen_1.png" alt=""></div>
+				<p>您只需运行安装程序包并重启您的电脑，即可开始使用 HFS+ for Windows！</p>
+			</div>
+			<div class="col-md-4">
+				<div class="how_img"><img src="img/hfs10.5_screen_2.png" alt=""></div>
+				<p>现在可以完全访问我的电脑中的 HFS+ 磁盘。</p>
+			</div>
+			<div class="col-md-4">
+				<div class="how_img"><img src="img/hfs10.5_screen_3.png" alt=""></div>
+				<p>您还可以使用磁盘管理器中的 HFS 磁盘，无需借助任何额外工具。</p>
+			</div>
+			<div class="note_foot col-xs-12">
+				<p><br><br>Mac®和Mac®标识是苹果公司在美国和其它国家注册的商标。<br>Windows®和Windows®是微软公司在美国和其它国家注册的商标。</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="full_faetures tab" id="tab3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="title">
+					<h2>所有功能</h2>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div id="bodyElement">
+						<div class="FeatureBody">
+							<table class="tbfeat">
+								<tbody>
+								<tr class="feat_title_none">
+									<th class="feat_title">
+										<p>主要及最新功能</p>
+									</th>
+									<th>
+										<p>优势</p>
+									</th>
+								</tr>
+									<tr id="Category1" class="categ" >
+										<td id="color1" class="CategoryTitle" colspan="2">
+											<div id="pic1" class="arrowGr" onclick="arr('1');">
+												<span>新功能</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<table id="feat1" class="FeatureItem" style="display:none;">
+												<tbody>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>完全支持 Windows 10</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<p>Paragon HFS + Windows 可以在众多电脑配置下顺利运行，包括最新版 Windows</p>
+														</td>
+													</tr>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>完全访问 HFS+/HFSX 分区 </strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<p>一旦安装完毕，Paragon HFS+ for Windows 将如读写本地 Windows 驱动程序一般，高速读写访问 Mac 格式的分区</p>
+														</td>
+													</tr>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>前所未有的HFS高性能和稳定性</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<p>Paragon HFS+ for Windows 保证 Windows® 和 Mac® 之间数据交换无障碍，即使是在工作量很大的情况下。</p>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+									<tr id="Category2" class="categ" >
+										<td id="color2" class="CategoryTitle" colspan="2">
+											<div id="pic2" class="arrowGr down" onclick="arr('2');">
+												<span>主要功能</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<table id="feat2" class="FeatureItem">
+												<tbody>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>通过“磁盘管理”操控平台进行自动加载和管理</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<p>安装 Paragon HFS+ for Windows，您可以通过 Windows 磁盘管理控制台浏览并访问任何 HFS+ 磁盘</p>
+														</td>
+													</tr>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>完全兼容 Boot Camp</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<p>此驱动安装在您 Mac 的 Boot Camp 环境中，实现从 Windows 直接访问 Mac 分区</p>
+														</td>
+													</tr>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>支持日志</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<p>此驱动程序支持本机 HFS + 日志记录，从而防止任何磁盘文件系统故障为非可逆损坏，且能很容易地使其重回正轨</p>
+														</td>
+													</tr>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>使用方便</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<p>使用方便。和原始分区一样对HFS分区进行加载——无需执行特定命令即可访问；只要将磁盘或其它介质与HFS相连即可使用</p>
+														</td>
+													</tr>
+
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>32和64字节系统通用安装器</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<p>无需确认您的电脑在何种操作系统下运作，以及需要哪种安装包。Paragon HFS + Windows 统一安装程序，完全兼容32位和64位系统</p>
+														</td>
+													</tr>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>以“.”作为起始标志的文件和文件夹是隐藏文件</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<p>Paragon HFS+ for Windows支持本地 Mac 显示选项</p>
+														</td>
+													</tr>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>可用USB 3.0</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<p>此驱动是利用最新的市场趋势和硬件优势量身打造的，使您体验最高速，最稳定的数据传输，感受最优秀的用户体验</p>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+									<tr id="Category3" class="categ" >
+										<td id="color3" class="CategoryTitle" colspan="2">
+											<div id="pic3" class="arrowGr" onclick="arr('3');">
+												<span>科技支持</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<table id="feat3" class="FeatureItem" style="display:none;">
+												<tbody>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>所支持的操作系统</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<ul>
+																<li>Windows 10(32/64位)</li>
+																<li>Windows 8 / 8.1 (32/64 字节)</li>
+																<li>Windows 7(32/64字节)</li>
+																<li>Windows Vista (32/64 位)</li>
+																<li>Windows XP (32/64 字节)</li>
+																<li>Windows 2008 Server (32/64字节)</li>
+																<li>Windows 2003 Server (32/64字节)</li>
+																<li>Windows 2012 Server</li>
+																<li>Windows 2012 R2 Server</li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>所支持的文件系统</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<ul>
+																<li>HFS+</li>
+																<li>HFSX</li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>支持硬盘和可移动介质</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<ul>
+																<li>平行ATA (IDE) HDD</li>
+																<li>序列ATA (SATA) HDD</li>
+																<li>SCSI HDD</li>
+																<li>USB 1.x/2.0和IEEE 1394 (FireWire)设备</li>
+																<li>USB 3.0设备</li>
+																<li>MBR和GPT硬盘驱动</li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td class="feat_display_none feat_syle_top">
+															<strong>系统要求</strong>
+														</td>
+														<td class="feat_display_none feat_syle">
+															<ul>
+																<li>RAM: 128 MB（推荐使用256 MB或更高性能）</li>
+																<li>CPU：Intel Pentium或与之相兼容, 233MHz或更高性能处理器</li>
+																<li>磁盘空间：10 MB用于程序安装</li>
+															</ul>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<section class="buy_online tab" id="tab4">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="title">
+					<h2>Buy online</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<!-- Футер -->
+<section class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="blocks">
+				<div class="block_1">
+					<div class="block1">
+						<div class="footer_line"></div>
+						<div class="hidden-xs">
+							<a href="#"><strong>For Mac</strong></a><br>
+							<a href="#">Extfs for Mac</a><br>
+							<a href="#">NTFS for Mac</a><br>
+							<a href="#">Hard Disk Manager for Mac</a><br>
+						</div>
+						<div class="hidden-sm hidden-md hidden-lg">
+							<div class="hide_blocks">
+								<input type="checkbox" id="hd-1" class="hide"/>
+								<label for="hd-1" class="arrow_clicked">For Mac<span class="arrow_footer"></span></label>
+								<div class="non">
+									<a href="#">Extfs for Mac</a><br>
+									<a href="#">NTFS for Mac</a><br>
+									<a href="#">Hard Disk Manager for Mac</a><br>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block12">
+						<div class="footer_line"></div>
+						<div class="hidden-xs">
+							<a href="#"><strong>For Windows</strong></a><br>
+							<a href="#">HFS+ for Windows</a><br>						
+						</div>
+						<div class="hidden-sm hidden-md hidden-lg">
+							<div class="hide_blocks">
+								<input type="checkbox" id="hd-2" class="hide"/>
+								<label for="hd-2" class="arrow_clicked">For Windows<span class="arrow_footer"></span></label>
+								<div class="non">
+									<a href="#">HFS+ for Windows</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block_2">
+					<div class="block16">
+						<div class="footer_line "></div>
+
+						<div class="hidden-xs">
+							<a href="#"><strong>Support</strong></a><br>
+							<a href="#"><strong>News</strong></a><br>
+						</div>
+							<div class="hidden-sm hidden-md hidden-lg">
+								<div class="hide_blocks">
+									<input type="checkbox" id="hd-5" class="hide"/>
+									<label for="hd-5"><a href="#">FAQ</a></label>
+								</div>
+							</div>
+
+						<div class="footer_line footer_top_line"></div>
+							<div class="hidden-sm hidden-md hidden-lg">
+								<div class="hide_blocks">
+									<input type="checkbox" id="hd-6" class="hide"/>
+									<label for="hd-6"><a href="#">News</a></label>
+								</div>
+							</div>
+					</div>
+					<div class="block14">
+						<div class="footer_line footer_top_line"></div>
+
+						<div class="hidden-xs">
+							<a href="#"><strong>Downloads</strong></a><br>
+							<a href="#"><strong>Manuals</strong></a><br>
+						</div>
+							<div class="hidden-sm hidden-md hidden-lg">
+								<div class="hide_blocks">
+									<input type="checkbox" id="hd-8" class="hide" checked/>
+									<label for="hd-8"><a href="#">Downloads</a></label>							
+								</div>							 
+							</div>
+						<div class="footer_line footer_top_line"></div>
+
+							<div class="hidden-sm hidden-md hidden-lg">
+								<div class="hide_blocks">
+									<input type="checkbox" id="hd-8" class="hide" checked/>
+									<label for="hd-8"><a href="#">Manuals</a></label>							
+								</div>							 
+							</div>
+					</div>
+				</div>
+				<div class="block_3">
+
+
+				<div class="block123">
+					<div class="footer_line footer_top_line"></div>
+					<div class="hidden-xs">
+						<a href="#"><strong>Subsribe to our newslatter</strong></a>
+						<p>Enter your e-mail and receive updates about special offers and exclusive content! </p>
+						<button class="sign">
+							<span>Newsletter Sign-Up ›</span>
+						</button>
+					</div>
+						<div class="hidden-sm hidden-md hidden-lg">
+							<div class="hide_blocks">
+								<input type="checkbox" id="hd-10" class="hide" checked/>
+								<label for="hd-10" class="arrow_clicked">Subsribe to our newslatter<span class="arrow_footer actived"></span></label>
+								<div class="non">
+									<p>Enter your e-mail and receive updates  about special offers and exclusive  content!  </p>
+									<button class="sign">
+										<span>Newsletter Sign-Up ›</span>
+									</button>
+								</div>
+							</div>
+
+							<div class="arrow_up"><a href="#"><img src="images/arrow_up.svg" onerror="this.onerror=null; this.src='images/arrow_up.png'" alt=""></a></div>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- --- -->
+
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Load CSS -->
+	<script>
+		function loadCSS(hf) {
+			var ms=document.createElement("link");ms.rel="stylesheet";
+			ms.href=hf;document.getElementsByTagName("head")[0].appendChild(ms);
+		}
+		loadCSS("main.min.css");   //User Styles + Media Queries
+	</script>
+
+	<!-- Load Scripts -->
+	<script>var scr = {"scripts":[
+		{"src" : "js/libs.js", "async" : false},
+		{"src" : "js/common.js", "async" : false}
+		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+
+	
+	
+</body>
+</html>
