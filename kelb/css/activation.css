@@ -236,9 +236,9 @@ body {
 @media only screen and (max-width: 660px) {
   #head .language-selection {
     margin: 30px -30px; }
-  .wrapper {
+/*   .wrapper {
     max-width: 565px;
-    margin: 5px; }
+    margin: 5px; } */
   .item {
     text-align: center; }
     .item img {
