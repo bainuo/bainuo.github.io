@@ -477,10 +477,10 @@ body{
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 
-.reg-log-block{
+/* .reg-log-block{
     width: 100%;
     height: auto;
-}
+} */
 
 .reg-log-block .reg-log-buttons{
     list-style: none;
