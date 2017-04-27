@@ -553,7 +553,7 @@ body{
 }
 
 /*// регистрационные поля ввода с  картинками*/
-.reg-log-block input[type=email]{
+/* .reg-log-block input[type=email]{
     width: 95%;
     height: 24px;
     margin-left: 2.5%;
@@ -582,7 +582,7 @@ body{
     background-position: 10px;
     background-size: 13px;
     text-indent: 30px;
-}
+} */
 
 .reg-log-block .reg-block .first-last-name{
     /*height: 79px;*/
