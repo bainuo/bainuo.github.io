@@ -330,11 +330,11 @@ body{
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 
-.user-info-block{
+/* .user-info-block{
     width: 100%;
     height: auto;
 }
-
+ */
 .user-info-block .description{
     font-size: 18px;
     color: black;
