@@ -264,7 +264,7 @@ body{
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 
-.info-block{
+/* .info-block{
     width: 100%;
     height: auto;
 }
@@ -315,18 +315,18 @@ body{
     width: 92%;
     margin-left: 20px;
     font-size: 17px;
-}
+} */
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 
-#changepass-page .info-block .grey-block-info ul{
+/* #changepass-page .info-block .grey-block-info ul{
     list-style-position: inside;
     display: inline-block;
     width: 90%;
     margin-left: 20px;
     margin-bottom: 20px;
     font-size: 17px;
-}
+} */
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 
@@ -335,7 +335,7 @@ body{
     height: auto;
 }
  */
-.user-info-block .description{
+/* .user-info-block .description{
     font-size: 18px;
     color: black;
     display: block;
@@ -428,7 +428,7 @@ body{
 .user-info-block .block-info .active-dictionaries .badges{
     width: 270px;
     margin: 20px auto 0px auto;
-}
+} */
 /* 
 .user-info-block .block-info .active-dictionaries .badges img{
     width: auto;
