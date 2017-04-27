@@ -429,7 +429,7 @@ body{
     width: 270px;
     margin: 20px auto 0px auto;
 }
-
+/* 
 .user-info-block .block-info .active-dictionaries .badges img{
     width: auto;
     height: 38px;
@@ -473,7 +473,7 @@ body{
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: bold;
-}
+} */
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 
@@ -481,7 +481,7 @@ body{
     width: 100%;
     height: auto;
 } */
-
+/* 
 .reg-log-block .reg-log-buttons{
     list-style: none;
 }
@@ -550,7 +550,7 @@ body{
     color: red;
     font-size: 14px;
     margin-left: 2.5%;
-}
+} */
 
 /*// регистрационные поля ввода с  картинками*/
 /* .reg-log-block input[type=email]{
@@ -583,10 +583,10 @@ body{
     background-size: 13px;
     text-indent: 30px;
 } */
-
-.reg-log-block .reg-block .first-last-name{
+/* 
+.reg-log-block .reg-block .first-last-name{ */
     /*height: 79px;*/
-}
+/* }
 
 .reg-log-block .reg-block .first-last-name p{
     display: block;
@@ -738,11 +738,11 @@ body{
 
 .forgot-pass a:hover{
     border-bottom-style: solid;
-}
+} */
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 
-.changepass-block p{
+/* .changepass-block p{
     display: block;
     margin-left: 2.5%;
     margin-top: 15px;
@@ -801,11 +801,11 @@ body{
 .changepass-block .new-pass-info{
     font-size: 14px;
     margin-top: 0px;
-}
+} */
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 
-#resetpass-page .info-block .description{
+/* #resetpass-page .info-block .description{
     margin-bottom: 20px;
 }
 
@@ -858,11 +858,11 @@ body{
 
 #forgottenpass-page .green{
     width: 95%;
-}
+} */
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 
-.confirmchanges-block .title{
+/* .confirmchanges-block .title{
     font-size: 20px;
     text-align: center;
 }
@@ -870,11 +870,11 @@ body{
 .confirmchanges-block .title-description{
     font-size: 16px;
     text-align: center;
-}
+} */
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 
-.footer{
+/* .footer{
     width: 100%;
     height: auto;
     background-color: #000066;
@@ -904,4 +904,4 @@ body{
     margin-top: 20px;
     color: white;
     text-align: center;
-}
+} */
