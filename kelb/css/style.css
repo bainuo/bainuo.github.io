@@ -36,11 +36,11 @@ body{
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
-    .wrapper {
+/*     .wrapper {
         max-width: 600px;
         min-height: 100%;
         margin: 0px 10px 0px 10px;
-    }
+    } */
 
     .register-button-block {
         width: auto;
