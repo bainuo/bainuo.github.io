@@ -67,7 +67,7 @@
 .user-info-block .activation-code-block .button-block {
     border-radius: 18px;
 }
-.reg-log-block input {
+/* .reg-log-block input {
     border-radius: 7px;
     width: 89%;
     height: 24px;
@@ -81,7 +81,7 @@
 .reg-log-block .log-block,
 .footer{
     border-radius: 7px;
-}
+} */
 .footer{
     padding: 3%;
 }
