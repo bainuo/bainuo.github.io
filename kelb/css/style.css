@@ -16,14 +16,14 @@ body{
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 
-/* @media only screen and (min-device-width : 569px) { */
+ @media only screen and (min-device-width : 569px) { */
 /*     .wrapper {
         width: 100%;
         max-width: 600px;
         margin: 0px auto;
     } */
 
-/*     .register-button-block {
+   .register-button-block {
         width: 50%;
         height: 40px;
         text-align: center;
@@ -34,7 +34,7 @@ body{
         border-radius: 5px;
     }
 }
-
+/*
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) { */
 /*     .wrapper {
         max-width: 600px;
