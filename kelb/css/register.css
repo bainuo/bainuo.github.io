@@ -1,4 +1,4 @@
-.item.important.register {
+/* .item.important.register {
   margin-top: 0;
   margin-bottom: 10px;
   text-align: center; }
@@ -58,7 +58,7 @@
 .reg-log-block .reg-block .first-last-name input {
   width: 80%;
   margin-left: 10%;
-  margin-right: 10%; }
+  margin-right: 10%; } */
 
 .open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn-default:hover {
   border-color: transparent; }
