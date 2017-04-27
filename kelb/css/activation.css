@@ -32,8 +32,8 @@
   color: #062B51;
   letter-spacing: 0;
   line-height: 22px;
-  max-width: 545px;
-  margin: 0 auto; }
+/*   max-width: 545px;
+  margin: 0 auto;*/ } 
   .user-info-block .sizeform {
     width: 98%; }
   .user-info-block .col-md-12 {
