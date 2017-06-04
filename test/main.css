@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: TrebuchetMSRegular; 
-    src: url(fonts/TrebuchetMSRegular/TrebuchetMSRegular.ttf); 
+    src: url(fonts/TrebuchetMSRegular/TrebuchetMSRegular.ttf) format("truetype"); 
    }
 
 body {
