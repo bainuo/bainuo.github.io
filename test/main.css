@@ -209,6 +209,9 @@ body {
 	-webkit-transform: rotate(-65deg);
 	-ms-transform: rotate(-65deg);
 	transform: rotate(-65deg);
+	top: -65px;
+	left: -6px;
+	height: 134px;
 }
 
 .last-col {
