@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<input id="phone" class="form-control" type="tel">
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://backyard-test.slovoed.com/oxfordWebCustomer/register.htm"></script>
+
+
+<script>
+$(document).ready(function(){
+	$("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
+	$("#phone").mask("+7(999) 999-9999");
+	$("#phoneadd").mask("+7(999) 999-9999? x99999");
+	$("#pk").mask("a*-999-a999");
+	$("#ssn").mask("999-99-9999");
+	$("#tax").mask("99-9999999");
+})
+</script>
+
+</body>
+</html>
