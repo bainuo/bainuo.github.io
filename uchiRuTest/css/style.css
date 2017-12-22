@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input {
+    border: 1px solid #c2c2c2;
+    border-radius: 3px;
+}
+
+img {
+    width: 100%;
+}
+
+.wrap {
+    height: 100vh;
+    display: flex;
+}
+
+.addition-numbers {
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.addition-numbers__wrap {
+    width: 215px; 
+    margin: 42px auto;
+}
+
+.addition-numbers__example {
+    font-size: 45px;
+    margin-bottom: 8px;
+}
+
+.addition-numbers__first-element,
+.addition-numbers__second-element {
+    max-width: 18px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.addition-numbers__valid {
+    border-radius: 5px;
+    padding: 0 6px;
+    background-color: rgb(244, 167, 87);
+}
+
+.addition-numbers__second-element,
+.addition-numbers__result {
+    display: none;
+}
+
+.addition-numbers__result {
+    max-width: 58px;
+    font-size: 45px;
+    text-align: center;
+}
