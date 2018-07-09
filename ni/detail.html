@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8" lang="ru-RU" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 9 ]> <html class="ie9" lang="ru-RU" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+    <title></title>
+
+    <link href="css/external.css" rel="stylesheet">
+    <link href="css/internal.css" rel="stylesheet">
+
+    <!-- При интеграции файл ui_kit.css НЕ подключать -->
+    <!-- <link href="css/ui_kit.css" rel="stylesheet"> -->
+
+    <!-- jquery подключаем в шапке т.к. какой-то js может быть внутри компонентов -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+    <div class="browse-happy">
+        <div class="container">
+            <p class="browse-happy__notice">Мы обнаружили, что вы используете <strong>устаревшую версию</strong> браузера Internet Explorer</p>
+            <p class="browse-happy__security">Из соображений безопасности этот сайт поддерживает Internet Explorer версии 10 и выше
+                <br>Кроме того, этот и многие другие сайты могут отображаться <strong>некорректно</strong></p>
+            <p class="browse-happy__update">Пожалуйста, обновите свой браузер по этой <a href="http://browsehappy.com/" target="_blank">ссылке</a></p>
+            <p class="browse-happy__recommend">(мы рекомендуем <a href="http://www.google.com/chrome" target="_blank">Google Chrome</a>)</p>
+        </div>
+    </div>
+    <![endif]-->
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+	
+    		<symbol id="icon-advantage" viewBox="0 0 19.969 21">
+    			<defs><style>.cls-1{fill:#f6bd04;fill-rule:evenodd}</style></defs><path d="M19.377 14.277c.421-.549.623-1.138.597-1.744-.026-.667-.318-1.19-.558-1.51.279-.712.386-1.832-.546-2.701-.684-.637-1.844-.922-3.451-.843-1.13.052-2.076.268-2.114.276H13.3c-.214.04-.442.088-.674.141-.017-.281.03-.979.537-2.552.601-1.87.567-3.302-.112-4.259C12.338.079 11.199 0 10.864 0c-.323 0-.619.136-.83.386-.477.567-.421 1.612-.361 2.095-.567 1.555-2.157 5.366-3.502 6.425-.026.018-.047.039-.069.061a4.712 4.712 0 0 0-.842 1.292 1.739 1.739 0 0 0-.851-.22H1.788C.799 10.039 0 10.86 0 11.866v7.136c0 1.01.804 1.827 1.788 1.827h2.621c.383 0 .739-.123 1.031-.334l1.01.123c.155.022 2.905.378 5.729.321.511.039.992.061 1.439.061.77 0 1.44-.061 1.999-.184 1.315-.286 2.213-.857 2.668-1.696a2.745 2.745 0 0 0 .293-1.681c.855-.791 1.005-1.665.975-2.28a3.006 3.006 0 0 0-.176-.882zM1.788 19.643a.636.636 0 0 1-.628-.641v-7.141c0-.355.284-.641.628-.641h2.621c.348 0 .628.29.628.641v7.137a.636.636 0 0 1-.628.641H1.788v.004zm16.489-5.88a.6.6 0 0 0-.078.716c0 .004.177.312.198.733.03.575-.241 1.085-.808 1.52a.607.607 0 0 0-.198.676c0 .004.185.584-.116 1.133-.288.527-.928.904-1.899 1.115-.778.172-1.835.202-3.133.097h-.06c-2.763.061-5.556-.308-5.587-.312h-.004l-.434-.053c.026-.123.039-.254.039-.386v-7.141c0-.188-.03-.373-.082-.544.078-.294.292-.949.8-1.506 1.929-1.564 3.816-6.838 3.897-7.066a.566.566 0 0 0 .026-.295c-.073-.491-.047-1.093.056-1.273.228.004.842.07 1.212.593.438.619.421 1.726-.052 3.192-.722 2.236-.782 3.413-.21 3.931a.92.92 0 0 0 .936.171c.262-.061.512-.114.748-.154.017-.004.039-.008.056-.013 1.319-.294 3.683-.474 4.504.29.696.65.202 1.511.146 1.603a.596.596 0 0 0 .103.764c.004.004.455.439.477 1.023.017.391-.163.791-.537 1.186z" class="cls-1"></path>
+    		</symbol>
+	
+    		<symbol id="icon-cart" viewBox="0 0 22 22">
+    			<path d="M20.3 12.9L18.5 22h-15l-1.8-9.1H0V7.7h1.7l1.6-6.5h3V0h9.3v1.3h3l1.6 6.5H22V13h-1.7zM4.7 20.6h12.7l1.5-7.7H3.1l1.6 7.7zm9.5-19.2H7.8v1.1h6.5V1.4zm3.4 1.3h-1.9V4H6.3V2.7H4.4l-1.2 5h15.6l-1.2-5zm3 6.5H1.4v2.3h19.1V9.2zM14.3 19l1-4.9 1.4.3-1 4.9-1.4-.3zm-4-4.8h1.4v5h-1.4v-5zm-5 .2l1.4-.3 1 4.9-1.4.3-1-4.9z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-facebook" viewBox="0 0 97.8 97.8">
+    			<path d="M48.9 0C21.9 0 0 21.9 0 48.9s21.9 48.9 48.9 48.9 48.9-21.9 48.9-48.9S75.9 0 48.9 0zm15.2 28.1h-5.7c-4.4 0-5.3 2.1-5.3 5.2v6.8h10.6v10.7H53.2v27.5H42.1V50.8h-9.2V40.1h9.2v-7.9C42.1 23 47.7 18 55.9 18h8.3l-.1 10.1z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-picking" viewBox="0 0 22 19.91">
+    			<defs><style>.cls-1{fill:#f6bd04;fill-rule:evenodd}</style></defs><path d="M20.471 10.281l-1.172 7.859c-.15 1.009-1.066 1.77-2.13 1.77H5.042c-1.057 0-1.95-.725-2.123-1.723l-1.375-7.905C.681 10.219 0 9.526 0 8.683v-.916c0-.884.751-1.604 1.674-1.604h1.14l.027-.028L9.058.178a.74.74 0 0 1 1.014 0 .666.666 0 0 1 0 .972L4.841 6.163h12.318L11.928 1.15a.666.666 0 0 1 0-.972.74.74 0 0 1 1.014 0l6.217 5.957.027.028h1.14c.923 0 1.674.72 1.674 1.604v.916c0 .838-.674 1.528-1.529 1.598zm.094-2.514a.234.234 0 0 0-.239-.229H1.674a.234.234 0 0 0-.239.229v.916c0 .127.107.23.239.23h7.174c.396 0 .717.307.717.687 0 .38-.321.687-.717.687H2.999l1.335 7.674a.706.706 0 0 0 .708.574h12.127c.354 0 .66-.253.71-.59l1.142-7.658h-5.869c-.396 0-.717-.308-.717-.687 0-.38.321-.687.717-.687h7.174a.235.235 0 0 0 .239-.23v-.916zM11 17.161c-.396 0-.717-.308-.717-.688v-4.124c0-.379.321-.687.717-.687.396 0 .717.308.717.687v4.124c0 .38-.321.688-.717.688zm-4.304 0c-.397 0-.718-.308-.718-.688v-4.124c0-.379.321-.687.718-.687.396 0 .717.308.717.687v4.124c0 .38-.321.688-.717.688zm8.608-5.499c.397 0 .718.308.718.687v4.124c0 .38-.321.688-.718.688-.396 0-.717-.308-.717-.688v-4.124c0-.379.321-.687.717-.687z" class="cls-1"></path>
+    		</symbol>
+	
+    		<symbol id="icon-shares" viewBox="0 0 22 22">
+    			<defs><style>.cls-1{fill:#f6bd04;fill-rule:evenodd}</style></defs><path d="M22 9.748L9.748 22l-1.923-1.923a4.678 4.678 0 0 1-4.762-1.14 4.678 4.678 0 0 1-1.14-4.762L0 12.252 12.252 0l1.923 1.923a4.678 4.678 0 0 1 4.762 1.14 4.678 4.678 0 0 1 1.14 4.762L22 9.748zm-3.571-1.596l.196-.439a3.304 3.304 0 0 0-.676-3.662 3.304 3.304 0 0 0-3.662-.676l-.439.196-1.596-1.595L1.976 12.252l1.595 1.596-.196.439a3.305 3.305 0 0 0 .676 3.662 3.305 3.305 0 0 0 3.662.676l.439-.196 1.596 1.595L20.024 9.748l-1.595-1.596zm-6.237 7.424l-1.39.148-.992-9.301 1.389-.148.993 9.301zm3.488-6.012c.369.369.572.86.572 1.381a1.94 1.94 0 0 1-.572 1.381 1.946 1.946 0 0 1-1.381.571c-.5 0-1-.19-1.381-.571a1.94 1.94 0 0 1-.572-1.381c0-.521.203-1.012.572-1.381.761-.761 2-.761 2.762 0zm-1.774 1.774a.556.556 0 1 0 .786-.786.556.556 0 0 0-.786.786zm-6.197 1.678a1.94 1.94 0 0 1-1.381-.573 1.937 1.937 0 0 1-.572-1.38A1.954 1.954 0 0 1 9.09 9.682a1.955 1.955 0 0 1-1.381 3.334zm.393-2.347a.555.555 0 0 0-.949.394.553.553 0 0 0 .556.555.557.557 0 0 0 .393-.949z" class="cls-1"></path>
+    		</symbol>
+	
+    		<symbol id="icon-size" viewBox="0 0 26 21">
+    			<defs><style>.cls-1{fill:#f6bd04;fill-rule:evenodd}</style></defs><path d="M21.283 11.454c-3.56 0-6.458-2.348-6.468-5.237l-.014-.388C14.57 2.582 11.34 0 7.401 0 3.671 0 .577 2.315.062 5.318a4.866 4.866 0 0 0-.062.8v8.68C0 18.218 3.313 21 7.401 21c3.172 0 5.884-1.675 6.941-4.023C15.399 19.325 18.111 21 21.283 21H26v-9.546h-4.717zM7.401.949c3.567 0 6.468 2.357 6.468 5.253 0 1.464-.743 2.79-1.938 3.744V5.844c.003-.275-.019-.767-.121-1.148-.322-1.211-1.243-2.254-2.528-2.861a7.398 7.398 0 0 0-3.753-.661A7.88 7.88 0 0 1 7.401.949zM1.193 4.726a3.57 3.57 0 0 1 .189-.382c1.499-2.156 4.862-2.896 7.497-1.65 1.032.488 1.767 1.307 2.017 2.247.216.812.057 1.66-.449 2.388-.456.657-1.229 1.122-2.124 1.295V4.602a.475.475 0 0 0-.272-.429c-1.383-.654-3.097-.26-3.902.899a2.644 2.644 0 0 0-.489 1.519v3.892C2.011 9.53.933 7.967.933 6.202c0-.513.091-1.008.26-1.476zm4.266 4.461a4.864 4.864 0 0 0 2.421.449h.001c1.245-.083 2.377-.623 3.104-1.462v2.397c-1.026.558-2.259.883-3.584.883-1 0-1.948-.185-2.795-.516V8.62c.246.224.533.416.853.567zm-.534-3.572c.356-.512 1.033-.801 1.726-.801.244 0 .491.036.726.111v3.77a3.923 3.923 0 0 1-1.515-.366C5.247 8.038 4.81 7.554 4.663 7a1.654 1.654 0 0 1 .262-1.385zm8.944 9.183c0 2.896-2.901 5.253-6.468 5.253-3.566 0-6.468-2.357-6.468-5.253V9.23c.18.269.384.525.608.767v1.393a.474.474 0 1 0 .946 0v-.549c.297.221.616.422.953.601v1.266a.474.474 0 1 0 .946 0v-.841c.416.156.854.28 1.307.37v1.051c0 .262.212.475.473.475a.474.474 0 0 0 .473-.475v-.917a9.099 9.099 0 0 0 1.524 0v.917c0 .262.212.475.473.475a.474.474 0 0 0 .473-.475v-1.051c.453-.09.89-.214 1.307-.37v.841c0 .262.212.475.473.475a.474.474 0 0 0 .473-.475v-1.266c.468-.26.773-.468.953-.601v.549a.473.473 0 1 0 .946 0V9.997c.224-.243.428-.499.608-.768v5.569zm8.997-2.394v7.647h-1.583c-3.555 0-6.449-2.342-6.467-5.226V9.231c.109.163.228.321.354.475v1.499a.474.474 0 1 0 .946 0v-.561c.159.13.326.254.499.372v1.481a.474.474 0 1 0 .946 0v-.934c.35.171.718.318 1.101.44v1.483a.474.474 0 1 0 .946 0v-1.242m5.446 7.807h-1.242v-7.648h1.242v7.648z" class="cls-1"></path>
+    		</symbol>
+	
+    		<symbol id="icon-star" viewBox="0 0 20.91 21">
+    			<defs><style>.cls-1{fill:#f6bd04;fill-rule:evenodd}</style></defs><path d="M20.901 7.936a.591.591 0 0 0-.468-.415l-6.526-.975L10.97.339A.58.58 0 0 0 10.451 0a.578.578 0 0 0-.52.343L7.033 6.568.507 7.588a.59.59 0 0 0-.468.416.623.623 0 0 0 .15.623l4.736 4.825-1.095 6.835c-.039.23.051.46.232.596a.56.56 0 0 0 .339.117.54.54 0 0 0 .271-.072l5.826-3.246 5.844 3.21a.567.567 0 0 0 .266.067c.317 0 .579-.275.579-.609a.493.493 0 0 0-.017-.14l-1.129-6.794 4.706-4.853a.617.617 0 0 0 .154-.627zm-5.882 4.835a.623.623 0 0 0-.163.541l.983 5.928-5.075-2.786a.562.562 0 0 0-.541 0l-5.058 2.817.949-5.936a.629.629 0 0 0-.167-.537L1.842 8.609l5.663-.885a.582.582 0 0 0 .434-.334l2.516-5.404 2.55 5.39a.59.59 0 0 0 .438.334l5.668.849-4.092 4.212z" class="cls-1"></path>
+    		</symbol>
+	
+    		<symbol id="icon-twitter" viewBox="0 0 97.8 97.8">
+    			<path d="M48.9 0C21.9 0 0 21.9 0 48.9s21.9 48.9 48.9 48.9 48.9-21.9 48.9-48.9S75.9 0 48.9 0zm21.4 38.3v1.2c0 14.9-11.3 30.2-30.2 30.2-5.8 0-11.4-1.7-16.3-4.8-.1-.1-.1-.2-.1-.3 0-.1.2-.2.3-.2.8.1 1.7.1 2.5.1 4.5 0 8.8-1.4 12.4-4-4.3-.4-8-3.3-9.4-7.5 0-.1 0-.2.1-.2.1-.1.2-.1.2-.1 1.2.2 2.4.2 3.6.1-4.5-1.4-7.6-5.6-7.6-10.3v-.1c0-.1.1-.2.1-.2h.3c1.2.6 2.4 1.1 3.8 1.2-2.6-2-4.1-5.1-4.1-8.4 0-1.9.5-3.8 1.5-5.4 0-.1.1-.1.2-.1s.2 0 .2.1C32.9 36 40.7 40 48.9 40.5c-.1-.7-.2-1.4-.2-2.1 0-6 4.8-10.8 10.8-10.8 2.9 0 5.8 1.2 7.8 3.3 2.3-.5 4.5-1.3 6.5-2.5.1-.1.2 0 .3 0 .1.1.1.2.1.3-.7 2.1-2 4-3.8 5.3 1.7-.3 3.3-.8 4.9-1.5.1 0 .2 0 .3.1.1.1.1.2 0 .3a24.7 24.7 0 0 1-5.3 5.4z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-vk" viewBox="0 0 97.8 97.8">
+    			<path d="M48.9 0C21.9 0 0 21.9 0 48.9s21.9 48.9 48.9 48.9 48.9-21.9 48.9-48.9S75.9 0 48.9 0zm18.8 53c1.7 1.7 3.6 3.3 5.1 5.2.7.8 1.3 1.7 1.8 2.7.7 1.4.1 2.9-1.2 3h-7.6c-2 .2-3.5-.6-4.9-2-1.1-1.1-2-2.2-3.1-3.3-.4-.5-.9-.9-1.4-1.2-1-.7-1.9-.5-2.5.6-.6 1.1-.7 2.3-.8 3.6-.1 1.8-.6 2.3-2.4 2.4-3.9.2-7.5-.4-10.9-2.4-3-1.7-5.3-4.1-7.4-6.9-3.9-5.4-7-11.2-9.7-17.3-.6-1.4-.2-2.1 1.3-2.1h7.5c1 0 1.7.6 2.1 1.6 1.3 3.3 3 6.5 5.1 9.4.6.8 1.1 1.6 1.9 2.1.9.6 1.6.4 2-.6.3-.6.4-1.3.4-2 .2-2.3.2-4.6-.1-6.9-.2-1.4-1-2.4-2.5-2.6-.7-.1-.6-.4-.3-.8.6-.7 1.2-1.2 2.3-1.2H51c1.4.3 1.7.9 1.9 2.2v9.6c0 .5.3 2.1 1.2 2.5.8.3 1.3-.4 1.7-.8 2.1-2.2 3.5-4.8 4.9-7.5.6-1.2 1.1-2.4 1.6-3.6.4-.9.9-1.4 2-1.3h9c1.4.2 1.8.8 1.4 2.2-.7 2.1-2 3.9-3.3 5.7-1.4 1.9-2.9 3.8-4.2 5.7-1.2 1.6-1.1 2.5.5 4z"></path>
+    		</symbol>
+	
+    		<symbol id="icon-workshop" viewBox="0 0 20 20">
+    			<defs><style>.cls-1{fill:#f6bd04;fill-rule:evenodd}</style></defs><path d="M18.96 12.1l-1.403.233a7.825 7.825 0 0 1-.564 1.362l.827 1.162a1.237 1.237 0 0 1-.134 1.592l-1.244 1.245a1.226 1.226 0 0 1-.873.363c-.259 0-.51-.079-.718-.23L13.694 17c-.434.23-.89.418-1.362.564l-.238 1.404A1.234 1.234 0 0 1 10.875 20H9.113c-.606 0-1.12-.435-1.22-1.032l-.234-1.404a7.819 7.819 0 0 1-1.319-.543l-1.174.836a1.226 1.226 0 0 1-1.587-.134l-1.244-1.245a1.231 1.231 0 0 1-.134-1.592l.823-1.145a7.796 7.796 0 0 1-.573-1.357l-1.419-.243A1.233 1.233 0 0 1 0 10.921V9.162c0-.605.434-1.119 1.032-1.22l1.386-.234c.142-.472.326-.927.556-1.366l-.836-1.174a1.237 1.237 0 0 1 .134-1.592l1.249-1.245c.229-.234.543-.363.872-.363.259 0 .51.079.719.23l1.148.827c.435-.234.89-.426 1.358-.573l.242-1.42C7.96.434 8.474 0 9.079 0h1.758c.606 0 1.12.434 1.22 1.032l.234 1.387c.488.146.96.343 1.411.581l1.161-.827a1.226 1.226 0 0 1 1.587.133l1.245 1.245c.43.426.484 1.099.133 1.592L17.001 6.3c.23.435.418.89.564 1.362l1.403.239a1.22 1.22 0 0 1 1.024 1.22v1.759c0 .605-.435 1.119-1.032 1.22zm-.083-2.979a.108.108 0 0 0-.092-.109l-1.754-.297a.553.553 0 0 1-.451-.413 6.679 6.679 0 0 0-.727-1.751.565.565 0 0 1 .025-.614l1.032-1.45a.113.113 0 0 0-.013-.142L15.653 3.1a.114.114 0 0 0-.08-.033.115.115 0 0 0-.062.021L14.07 4.124a.565.565 0 0 1-.614.025 6.791 6.791 0 0 0-1.792-.736.563.563 0 0 1-.417-.455l-.293-1.742a.107.107 0 0 0-.108-.092H9.088a.107.107 0 0 0-.109.092l-.301 1.767a.57.57 0 0 1-.413.451 6.629 6.629 0 0 0-1.746.736.574.574 0 0 1-.618-.025L4.46 3.117a.099.099 0 0 0-.062-.021.107.107 0 0 0-.08.033L3.074 4.374a.114.114 0 0 0-.013.142l1.04 1.463c.13.179.142.417.029.61a6.712 6.712 0 0 0-.714 1.754.563.563 0 0 1-.455.418l-1.742.293a.107.107 0 0 0-.091.108v1.759c0 .055.037.101.091.109l1.767.301a.57.57 0 0 1 .451.413c.159.615.409 1.204.735 1.747a.57.57 0 0 1-.025.618L3.12 15.55a.114.114 0 0 0 .012.143l1.245 1.245a.11.11 0 0 0 .079.033.121.121 0 0 0 .063-.021l1.461-1.04a.55.55 0 0 1 .326-.105.58.58 0 0 1 .284.075c.539.31 1.115.548 1.712.702.213.055.376.23.414.452l.292 1.754a.108.108 0 0 0 .109.092h1.758c.054 0 .1-.037.109-.092l.296-1.754a.554.554 0 0 1 .413-.452 6.653 6.653 0 0 0 1.75-.727.567.567 0 0 1 .614.025l1.449 1.032a.102.102 0 0 0 .063.021c.021 0 .05-.004.079-.033l1.245-1.245a.113.113 0 0 0 .012-.142l-1.031-1.454a.563.563 0 0 1-.025-.614 6.67 6.67 0 0 0 .726-1.751.56.56 0 0 1 .452-.413l1.754-.293a.107.107 0 0 0 .091-.108h.005V9.121zm-8.879 5.193a4.318 4.318 0 0 1-4.314-4.316 4.318 4.318 0 0 1 4.314-4.316 4.318 4.318 0 0 1 4.314 4.316 4.318 4.318 0 0 1-4.314 4.316zm0-7.504a3.19 3.19 0 0 0 0 6.376 3.19 3.19 0 0 0 0-6.376z" class="cls-1"></path>
+    		</symbol>
+	
+    </svg>
+
+
+    <div class="wrap-main">
+        <header class="header">
+            <div class="container">
+                <div class="container__inside">            
+                    <a href="#" class="header__logo">
+                        <img src="img/svg/logo.svg" alt="Логотип магазина хоккея Наша Игра">
+                    </a>
+            
+
+                    <div class="header-box">
+                        <div class="header-box__top">
+                            <div class="header-box__descr">Хоккей</div>
+
+                            <ul class="header-box__list">
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Доставка и оплата</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="header-box__line"></div>
+
+                        <div class="header-box__bottom">
+                            <div class="telephones telephones_header-box">
+                                <div class="telephones__phone"><a href="tel:+74957895634">8 495 789-56-34 </a>телефон в Москве</div>
+                                <div class="telephones__phone"><a href="tel:+78008888888">8 800 888-88-88 </a>телефон по России</div>
+                            </div>
+
+                            <div class="header-box__usr">
+                                <a href="#" class="header-box__shops">Розничные магазины</a>
+                                <a href="#popup" class="header-box__login      popup-link">Вход</a> | <a href="#popup-registration" class="popup-link">Регистрация</a>
+
+                                <div id="popup" class="mfp-hide popup-form">
+                                    <div class="popup-form__container">
+                                        <div class="popup-form__login-title">
+                                            <p>Пожалуйста, авторизуйтесь!</p>
+                                        </div>
+                                        <div class="popup-form__field"><label>Email:</label><input type="text"></div>
+                                        <div class="popup-form__field"><label>Пароль:</label><input type="text"></div>
+
+                                        <button class="button button__login">Войти</button>
+                                        <a href="#" class="popup-form__forget">Забыли пароль?</a>
+                                    </div>
+                                </div>
+
+                                <div id="popup-registration" class="mfp-hide popup-form">
+                                    <div class="popup-form__container">
+                                        <div class="popup-form__login-title">
+                                            <p>Регистрация.</p>
+                                        </div>
+                                        <div class="popup-form__field"><label>Email:</label><input type="text"></div>
+                                        <div class="popup-form__field"><label>Подтверждение пароля:</label><input type="text"></div>
+                                        <div class="popup-form__field"><label>ФИО:</label><input type="text"></div>
+
+                                        <button class="button button__reg">Регистрация</button>
+                                
+                                        <div class="popup-form__personal-inf">
+                                            <label class="checkbox__label">Согласен с <a href="#" class="popup-form__personal">условиями обработки персональных данных</a>
+                                              <input type="checkbox" checked="checked">
+                                              <span class="check"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                        
+
+                        
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section class="js-main-menu section--main-menu">
+            <div class="main-menu__wrap">
+                <div class="container">
+                    <div class="container__inside"> 
+
+                        <ul class="main-menu">
+                            <li><a href="#">Игрок</a></li>
+                            <li class="main-menu__dropdown"><a href="#">ВРАТАРЬ</a></li>
+                            <li><a href="#">ОДЕЖДА</a></li>
+                            <li><a href="#">БЕЛЬЕ</a></li>
+                            <li><a href="#">СУМКИ</a></li>
+                            <li><a href="#">АКСЕССУАРЫ</a></li>
+                        </ul>
+
+                        <form class="main-menu__search-form">
+                            <input type="text" value="" placeholder="Поиск по сайту">
+                            <button class="main-menu__search-go btn" type="submit">
+                                <span class="icon icon-search"></span>
+                            </button>
+                        </form>
+                        <button class="main-menu__cart"><svg class="icon icon--cart"><use xlink:href="#icon-cart"></use></svg>товаров : 5</button>
+                
+                    </div>
+                </div>
+            </div>    
+            <div class="main-menu-sub__wrap">
+                <div class="container">
+                    <div class="container__inside">
+                        <ul class="main-menu-sub">
+                            <li><a href="#">Коньки</a></li>
+                            <li><a href="#">Клюшки</a></li>
+                            <li><a href="#">Защита</a></li>
+                            <li><a href="#">Трусы</a></li>
+                            <li><a href="#">Перчатки</a></li>
+                            <li><a href="#">Шлема</a></li>
+                            <li><a href="#">Сумки</a></li>
+                            <li><a href="#">Белье</a></li>
+                            <li><a href="#">Гамаши</a></li>
+                            <li><a href="#">Майки</a></li>
+                            <li><a href="#">Аксессуары</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+   
+        </section>
+
+
+
+        <section class="section section--category-products">
+            <div class="container">
+                <div class="container__inside">
+                    <a href="#" class="category-products" style="background-image: url('img/djersi.png');">
+                        <h6>Хоккейные<br>джерси</h6>
+                    </a>                    
+                    <a href="#" class="category-products" style="background-image: url('img/accessories.png');">
+                        <h6>Хоккейные<br>Аксессуары</h6>
+                    </a> 
+                    <a href="#" class="category-products" style="background-image: url('img/bag.png');">
+                        <h6>Спортивные<br>сумки</h6>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section breadcrumbs">
+            <div class="container">
+                <div class="container__inside">
+                    <span><a href="#">Главная</a></span>
+                    <span><a href="#">Каталог</a></span>
+                    <span><a href="#">Каталог-Игрок</a></span>
+                    <span><a href="#">Коньки</a></span>
+                    <span><a href="#">КОНЬКИ BAUER NEXUS 1N SR</a></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--detail-product">
+            <div class="container">
+                <div class="container__inside">
+
+                    <div class="detail-product-slider__wrap">
+                        <div class="detail-product-slider-nav">
+                            <div class="detail-product-slider-nav__item"><img src="http://placekitten.com/1000/600" alt=""></div>                            
+                            <div class="detail-product-slider-nav__item"><img src="http://placekitten.com/1000/600" alt=""></div>                            
+                        </div>
+                        <div class="detail-product-slider">
+                            <div class="detail-product-slider__item"><a href="http://placekitten.com/1000/600" class="detail-product-slider__slide"><img src="http://placekitten.com/1000/600" alt=""></a></div>
+                            <div class="detail-product-slider__item"><a href="http://placekitten.com/1000/600" class="detail-product-slider__slide"><img src="http://placekitten.com/1000/600" alt=""></a></div>                                                   
+                        </div>
+                    </div>
+                    <div class="detail-product-descr">
+                        <h3 class="title">КОНЬКИ BAUER <br> NEXUS 1N SR</h3>
+                        <div class="detail-product-descr__old-price">17 990 руб.</div>
+                        <div class="detail-product-descr__price">16 990 руб.</div>
+                        <div class="detail-product__btns">
+                            <button class="button-size">Размер / Цвет</button>
+                            <a href="#popup-add-to-card" class="button button__add-to-card button_lg popup-link"><svg class="icon icon--cart"><use xlink:href="#icon-cart"></use></svg> Добавить в корзину</a>
+
+                            <div id="popup-add-to-card" class="mfp-hide popup-form">
+                                <div class="popup-form__container">
+                                    <div class="popup-form__login-title">
+                                        <p>Товар был добавлен в корзину!</p>
+                                    </div>                                   
+                                    <button class="button button_popup">Оформить заказ</button>
+                                    <button class="button button_popup button__light">Продолжить покупки</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-product__links">
+                            <a class="detail-product__lnk popup-link" href="#popup-terms-delivery">Условия бесплатной доставки</a>
+
+                            <div id="popup-terms-delivery" class="mfp-hide popup-form">
+                                <div class="popup-form__container">
+                                    <div class="popup-form__login-title">
+                                        <p>Условия бесплатной доставки</p>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti necessitatibus nulla, odit sapiente illum facere harum atque nihil cumque facilis ipsa. Mollitia quasi perspiciatis ipsa vero unde animi eius, amet, quis corporis assumenda, nisi reprehenderit, sequi expedita corrupti maxime nostrum.</p>                                    
+                                </div>
+                            </div>
+
+                            <a class="detail-product__lnk popup-link" href="#popup-size-table">Таблица размеров</a>
+
+                            <div id="popup-size-table" class="mfp-hide popup-form popup-form_size">
+                                <div class="popup-form__container">
+                                    <div class="popup-form__login-title">
+                                        <p>Таблица размеров</p>
+                                    </div>
+                                    <img src="https://www.nashaigra.ru/img/table/t1.png" alt="">                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-product-presence">
+                            <p class="detail-product-presence__title">Наличие в магазинах</p>
+                            <div class="detail-product-presence__towns">
+                                <div class="detail-product-presence__town"><a href="#" class="detail-product-presence__lnk">Тверь</a> <button class="detail-product-presence__btn">Наличие</button></div>
+                                <div class="detail-product-presence__town"><a href="#" class="detail-product-presence__lnk">Москва</a> <button class="detail-product-presence__btn">Наличие</button></div>
+                                <div class="detail-product-presence__town"><a href="#" class="detail-product-presence__lnk">Зеленоград</a> <button class="detail-product-presence__btn">Наличие</button></div>
+                                <div class="detail-product-presence__town"><a href="#" class="detail-product-presence__lnk">Пенза</a> <button class="detail-product-presence__btn">Наличие</button></div>
+                                <div class="detail-product-presence__town"><a href="#" class="detail-product-presence__lnk">Ярославль</a> <button class="detail-product-presence__btn">Наличие</button></div>
+                                
+                               
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section  class="section section--title">
+            <div class="container">
+                <div class="container__inside">
+                    <h3 class="title">Возможно, вас заинтересует</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--interested-carousel">
+                    <div class="container">
+                        <div class="container__inside">
+                            <div class="product--interested-carousel js-product-interested-carousel">
+
+
+
+                        <!-- <div class="product-carousel__slide" style="background-image: url('img/banner1.png');">
+                            <div class="container">
+                                <div class="container__inside">
+                                    <div class="product-carousel__content">
+                                        <div class="product-carousel__title">Заголовок слайдера</div>
+                                        <div class="product-carousel__descr">Короткий комментарий, о чем идет речь</div>
+                                        <button class="button">Подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-carousel__slide" style="background-image: url('img/banner1.png');">
+                            <div class="container">
+                                <div class="container__inside">
+                                    <div class="product-carousel__content">
+                                        <div class="product-carousel__title">Заголовок слайдера</div>
+                                        <div class="product-carousel__descr">Короткий комментарий, о чем идет речь</div>
+                                        <button class="button">Подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+         -->
+
+                                <a href="#" class="catalog-item-product">
+                                    <div class="catalog-item-product__sale">
+                                        <div class="catalog-item-product__percent">%</div>
+                                    </div>
+                                    <div class="catalog-item-product__goods">
+                                        <img src="img/product-catalog/skate.png" alt="">
+                                    </div>
+
+                                    <div class="catalog-item-product__descr">
+                                        <div class="catalog-item-product__title">
+                                            коньки bauer vapor 1x s17
+                                        </div>
+                                        <div class="catalog-item-product__small-dsc">
+                                            Sr.
+                                        </div>
+                                        <div class="catalog-item-product__old-rice">
+                                            <!-- 17 990 руб. -->
+                                        </div>
+
+                                    </div>
+
+                                    <div class="catalog-item-product__price">
+                                        28 990 руб.
+                                    </div>
+                                </a>
+
+                                <a href="#" class="catalog-item-product">
+                                    <div class="catalog-item-product__sale">
+                                        <div class="catalog-item-product__percent">%</div>
+                                    </div>
+                                    <div class="catalog-item-product__goods">
+                                        <img src="img/product-catalog/skate.png" alt="">
+                                    </div>
+
+                                    <div class="catalog-item-product__descr">
+                                        <div class="catalog-item-product__title">
+                                            коньки bauer vapor 1x s17
+                                        </div>
+                                        <div class="catalog-item-product__small-dsc">
+                                            Sr.
+                                        </div>
+                                        <div class="catalog-item-product__old-rice">
+                                            <!-- 17 990 руб. -->
+                                        </div>
+
+                                    </div>
+
+                                    <div class="catalog-item-product__price">
+                                        28 990 руб.
+                                    </div>
+                                </a>
+
+                                <a href="#" class="catalog-item-product">
+                                    <div class="catalog-item-product__sale">
+                                        <div class="catalog-item-product__percent">%</div>
+                                    </div>
+                                    <div class="catalog-item-product__goods">
+                                        <img src="img/product-catalog/skate.png" alt="">
+                                    </div>
+
+                                    <div class="catalog-item-product__descr">
+                                        <div class="catalog-item-product__title">
+                                            коньки bauer vapor 1x s17
+                                        </div>
+                                        <div class="catalog-item-product__small-dsc">
+                                            Sr.
+                                        </div>
+                                        <div class="catalog-item-product__old-rice">
+                                            <!-- 17 990 руб. -->
+                                        </div>
+
+                                    </div>
+
+                                    <div class="catalog-item-product__price">
+                                        28 990 руб.
+                                    </div>
+                                </a>
+
+                                <a href="#" class="catalog-item-product">
+                                    <div class="catalog-item-product__sale">
+                                        <div class="catalog-item-product__percent">%</div>
+                                    </div>
+                                    <div class="catalog-item-product__goods">
+                                        <img src="img/product-catalog/skate.png" alt="">
+                                    </div>
+
+                                    <div class="catalog-item-product__descr">
+                                        <div class="catalog-item-product__title">
+                                            коньки bauer vapor 1x s17
+                                        </div>
+                                        <div class="catalog-item-product__small-dsc">
+                                            Sr.
+                                        </div>
+                                        <div class="catalog-item-product__old-rice">
+                                            <!-- 17 990 руб. -->
+                                        </div>
+
+                                    </div>
+
+                                    <div class="catalog-item-product__price">
+                                        28 990 руб.
+                                    </div>
+                                </a>
+
+                                <a href="#" class="catalog-item-product">
+                                    <div class="catalog-item-product__sale">
+                                        <div class="catalog-item-product__percent">%</div>
+                                    </div>
+                                    <div class="catalog-item-product__goods">
+                                        <img src="img/product-catalog/skate.png" alt="">
+                                    </div>
+
+                                    <div class="catalog-item-product__descr">
+                                        <div class="catalog-item-product__title">
+                                            коньки bauer vapor 1x s17
+                                        </div>
+                                        <div class="catalog-item-product__small-dsc">
+                                            Sr.
+                                        </div>
+                                        <div class="catalog-item-product__old-rice">
+                                            <!-- 17 990 руб. -->
+                                        </div>
+
+                                    </div>
+
+                                    <div class="catalog-item-product__price">
+                                        28 990 руб.
+                                    </div>
+                                </a>
+
+                                <a href="#" class="catalog-item-product">
+                                    <div class="catalog-item-product__sale">
+                                        <div class="catalog-item-product__percent">%</div>
+                                    </div>
+                                    <div class="catalog-item-product__goods">
+                                        <img src="img/product-catalog/skate.png" alt="">
+                                    </div>
+
+                                    <div class="catalog-item-product__descr">
+                                        <div class="catalog-item-product__title">
+                                            коньки bauer vapor 1x s17
+                                        </div>
+                                        <div class="catalog-item-product__small-dsc">
+                                            Sr.
+                                        </div>
+                                        <div class="catalog-item-product__old-rice">
+                                            <!-- 17 990 руб. -->
+                                        </div>
+
+                                    </div>
+
+                                    <div class="catalog-item-product__price">
+                                        28 990 руб.
+                                    </div>
+                                </a>
+
+                                <a href="#" class="catalog-item-product">
+                                    <div class="catalog-item-product__sale">
+                                        <div class="catalog-item-product__percent">%</div>
+                                    </div>
+                                    <div class="catalog-item-product__goods">
+                                        <img src="img/product-catalog/skate.png" alt="">
+                                    </div>
+
+                                    <div class="catalog-item-product__descr">
+                                        <div class="catalog-item-product__title">
+                                            коньки bauer vapor 1x s17
+                                        </div>
+                                        <div class="catalog-item-product__small-dsc">
+                                            Sr.
+                                        </div>
+                                        <div class="catalog-item-product__old-rice">
+                                            <!-- 17 990 руб. -->
+                                        </div>
+
+                                    </div>
+
+                                    <div class="catalog-item-product__price">
+                                        28 990 руб.
+                                    </div>
+                                </a>
+
+                                <a href="#" class="catalog-item-product">
+                                    <div class="catalog-item-product__sale">
+                                        <div class="catalog-item-product__percent">%</div>
+                                    </div>
+                                    <div class="catalog-item-product__goods">
+                                        <img src="img/product-catalog/skate.png" alt="">
+                                    </div>
+
+                                    <div class="catalog-item-product__descr">
+                                        <div class="catalog-item-product__title">
+                                            коньки bauer vapor 1x s17
+                                        </div>
+                                        <div class="catalog-item-product__small-dsc">
+                                            Sr.
+                                        </div>
+                                        <div class="catalog-item-product__old-rice">
+                                            <!-- 17 990 руб. -->
+                                        </div>
+
+                                    </div>
+
+                                    <div class="catalog-item-product__price">
+                                        28 990 руб.
+                                    </div>
+                                </a>
+
+                        
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </section>
+
+        <section class="section section--detail-descr">
+            <div class="container">
+                <div class="container__inside">
+                    <div class="detail-descr__product detail-descr_col">
+                        <div class="detail-descr__img">
+                            <img src="img/detail/product1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="detail-descr__text detail-descr_col">
+                        <h4 class="detail-descr__title">Описание</h4>
+                        <p>Мужские баскетбольные кроссовки Nike Zoom KDX универсальны, как и сам Кевин Дюрант. Они обеспечивают превосходную адаптивную амортизацию на любой поверхности и поддержку там, где это необходимо.</p>
+                        <h5 class="detail-descr__benefits">Преимущества</h5>
+                        <h6 class="detail-descr__title_sm">ФИКСАЦИЯ И КОМФОРТ</h6>
+                        <p>Вставки из легкого материала Flyknit создают зоны воздухопроницаемости, эластичности и поддержки, обеспечивая удобную плотную посадку и фиксацию.</p>
+                        <h6 class="detail-descr__title_sm">ПОДДЕРЖКА ТАМ, ГДЕ НЕОБХОДИМО</h6>
+                        <p>Широкие шнурки охватывают боковые части стопы, обеспечивая комфортную поддержку там, где это необходимо.</p>
+                        <h6 class="detail-descr__title_sm">ОПТИМАЛЬНАЯ АМОРТИЗАЦИЯ</h6>
+                        <p>Система Nike Zoom Air создает сверхадаптивную амортизацию, поддерживая естественные движения стопы. Утолщенная область пятки смягчает жесткие приземления, а более тонкая область носка позволяет лучше контролировать движения.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+		<footer class="footer">  
+		    <div class="footer--top">
+		        <div class="container">
+		            <div class="container__inside">
+		                <div class="footer-content__col">
+		                    <ul class="footer-top__list">
+		                        <li><a href="#">О компании</a></li>
+		                        <li><a href="#">Адреса</a></li>
+		                        <li><a href="#">Отзывы</a></li>
+		                        <li><a href="#">Помощь</a></li>
+		                    </ul>
+		                </div>
+		                <div class="footer-content__col">
+		                    <ul class="footer-top__list">
+		                        <li><a href="#">Новости</a></li>
+		                        <li><a href="#">Контакты</a></li>
+		                        <li><a href="#">Вакансии</a></li>
+		                        <li><a href="#">Покупателям</a></li>
+		                    </ul>
+		                </div>
+		                <div class="footer-content__col">
+		                    <ul class="footer-top__list">
+		                        <li><a href="#">Способ оплаты</a></li>
+		                        <li><a href="#">Возврат</a></li>
+		                        <li><a href="#">Статус заказа?</a></li>
+		                    </ul>
+		                </div>
+		                <div class="footer-content__col">
+		                    <div class="footer-content__social">
+		                        <p class="footer-content__social-title">Наша игра в соцсетях</p>
+		                        <div class="social-icons">
+		                            <a href="#" rel="nofollow" class="social-icon social-icon_vk"><svg class="icon icon-social icon-social--vk"><use xlink:href="#icon-vk"></use></svg></a>
+		                            <a href="#" rel="nofollow" class="social-icon social-icon_vk"><svg class="icon icon-social icon-social--twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+		                            <a href="#" rel="nofollow" class="social-icon social-icon_vk"><svg class="icon icon-social icon-social--facebook"><use xlink:href="#icon-facebook"></use></svg></a>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="footer--bottom">
+		        <div class="container">
+		            <div class="container__inside">
+		                <div class="footer-bottom-content__col">
+		                    <span class="footer-bottom__copyright">2017 © «Наша Игра»<br>Интернет-магазин спортивной экипировки</span>
+		                </div>
+		                <div class="footer-bottom-content__col">
+		                    <div class="telephones">
+		                        <div class="telephones__phone">телефон в Москве <a href="tel:+74957895634">8 495 789-56-34 </a></div>
+		                        <div class="telephones__phone">телефон по России <a href="tel:+78008888888">8 800 888-88-88 </a></div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</footer>
+
+    </div>
+    <script src="js/external.js" type="text/javascript"></script>
+    <script src="js/internal.js" type="text/javascript"></script>
+
+
+
+
+    <!-- Warning -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.js"></script>
+    <script>
+        $('.popup-link').magnificPopup();
+    </script>
+</body>
+</html>
