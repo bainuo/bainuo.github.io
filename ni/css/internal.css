@@ -3,7 +3,7 @@
             box-sizing: border-box;
     margin: 0;
     padding: 0;
-    outline: none;
+    /*outline: none;*/
 }
 
 html, body {
@@ -18,8 +18,8 @@ body {
     line-height: 1.5;
     color: #000;
     vertical-align: top;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    /*-webkit-backface-visibility: hidden;
+            backface-visibility: hidden;*/
 }
 
 img {
@@ -655,7 +655,7 @@ button {
     text-transform: uppercase;
     text-align: center;
     vertical-align: top;
-    outline: none;
+    /*outline: none;*/
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
     border-radius: 5px;
@@ -947,7 +947,7 @@ button {
     cursor: pointer;
     color: transparent;
     border: 0;
-    outline: none;
+    /*outline: none;*/
     background: transparent;
 }
 
@@ -987,7 +987,7 @@ button {
     cursor: pointer;
     color: transparent;
     border: none;
-    outline: none;
+    /*outline: none;*/
     background: transparent;
     background-repeat: no-repeat;
 }
